@@ -1,6 +1,6 @@
 # Gossip Project - On RAILS Baby ! 
 
-![](https://i.imgur.com/LXoz75b.png)
+![](https://i.imgur.com/a4nTPrl.png)
 
 Rails, Front & Back
 
@@ -22,7 +22,7 @@ This was a project to do on day 1 / week 3 of our Fullstack Bootcamp (Hi THP !)
 ```ruby
 $ rails server  
 ```
-
+![](https://media1.giphy.com/media/PM0KuSGiKo1FEdUVAm/giphy.gif?cid=ecf05e477ixwmjfpwb124xjaof3bqgmm1uf6re7jgfmrlg3l&rid=giphy.gif&ct=g)
 ### Starting with few dynamic pages ###
 
 
@@ -45,9 +45,6 @@ Contact form
 ~~ Welcome Page
 
 A welcome page, which greets the user based on the name passed in the URL In the home page, it will be possible to click on each gossip to "See more", which will have the effect of going to the gossip page. Finally, since it's you, we're going to put CSS in the site, thanks in particular to Bootstrap.
-
-
-![](https://media1.giphy.com/media/PM0KuSGiKo1FEdUVAm/giphy.gif?cid=ecf05e477ixwmjfpwb124xjaof3bqgmm1uf6re7jgfmrlg3l&rid=giphy.gif&ct=g)
 
 ### Ready to spill the tea ?  
 Something to get into the mood [here](https://www.youtube.com/watch?v=NUuRX3JYCHY)

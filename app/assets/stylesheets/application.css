@@ -83,4 +83,5 @@ h1 {
 
 .jumbotron {
   background-image: url("https://images.pexels.com/photos/3660228/pexels-photo-3660228.jpeg");
+  background-size: cover;
 }
