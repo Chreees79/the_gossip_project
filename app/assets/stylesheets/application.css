@@ -81,7 +81,15 @@ h1 {
   margin-bottom: 30px;
 }
 
-.jumbotron {
-  background-image: url("https://images.pexels.com/photos/3660228/pexels-photo-3660228.jpeg");
+.jumbotron-fluid {
+  margin-top: -14px;
+  height: 100vh;
+  background-image: url(https://images.pexels.com/photos/1487883/pexels-photo-1487883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   background-size: cover;
+  background-position: center bottom;
+}
+
+.gossip {
+  display: flex;
+  flex-direction: row;
 }
