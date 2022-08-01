@@ -1,0 +1,6 @@
+<h1>Fiche de l'auteur:</h1>
+<%my_author = User.find(params[:id])%>
+<h2><%= "#{my_author.first_name} #{my_author.last_name}, #{my_author.age} ans" %></h2>
+<p><%= my_author.description %></p><br/>
+<p><%= "email: #{my_author.email}"%></p>
+<p><%= my_author.city.name %></p>
