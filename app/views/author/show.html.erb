@@ -1,6 +1,8 @@
-<h1>Fiche de l'auteur:</h1>
-<%my_author = User.find(params[:id])%>
-<h2><%= "#{my_author.first_name} #{my_author.last_name}, #{my_author.age} ans" %></h2>
-<p><%= my_author.description %></p><br/>
-<p><%= "email: #{my_author.email}"%></p>
-<p><%= my_author.city.name %></p>
+<div class="container p-3">
+    <h1 class="p-3" style="color: rgb(110, 76, 7)">Fiche de l'auteur:</h1>
+    <%my_author = User.find(params[:id])%>
+    <h2 class="p-3"><%= "#{my_author.first_name} #{my_author.last_name}, #{my_author.age} ans" %></h2>
+    <p class="p-3">description: <%= my_author.description %></p>
+    <p class="p-3"><%= "email: #{my_author.email}"%></p>
+    <p class="p-3">Ville: <%= my_author.city.name %></p>
+</div>

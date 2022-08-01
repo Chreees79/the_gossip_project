@@ -1,2 +1,15 @@
+<!--<img src="https://images.pexels.com/photos/3660228/pexels-photo-3660228.jpeg" class="img-fluid">
+<div class="p-3">
 <h1>Bonjour <%=params[:first_name]%>!</h1>
 <p>Ici c'est notre super site de potins, il est chouette, non ?</p>
+</div>
+-->
+<div class="jumbotron">
+  <h1 class="display-4">Bonjour <%=params[:first_name]%>!</h1>
+  <p class="lead">Ici c'est notre super site de potins, il est chouette, non ?</p>
+  <hr class="my-4">
+  <p>Clique ici pour le visiter !</p>
+  <p class="lead">
+    <%= link_to "Lezclass="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>

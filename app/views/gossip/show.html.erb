@@ -1,6 +1,8 @@
-<h1>Des précisions à propos de ce potin ?</h1>
-<%my_gossip = Gossip.find(params[:id])%>
-<h2>Titre: <%= my_gossip.title%></h2>
-<h3>Auteur: <%= link_to "#{my_gossip.user.first_name} #{my_gossip.user.last_name}", author_path(my_gossip.user.id)%></h3>
-<p>Contenu: <%= my_gossip.content%></p>
-<p>Créé le: <%= my_gossip.created_at.strftime("%d/%m/%Y à %Hh%M")%></p>
+<div class="container m-2" style="min-height: 650px">
+  <h1 class="p-3">Des précisions à propos de ce potin ?</h1>
+  <%my_gossip = Gossip.find(params[:id])%>
+  <h2 class="p-3">Titre: <%= my_gossip.title%></h2>
+  <h3 class="p-3">Auteur: <%= link_to "#{my_gossip.user.first_name} #{my_gossip.user.last_name}", author_path(my_gossip.user.id), class:"author"%></h3>
+  <p class="p-3">Contenu: <%= my_gossip.content%></p>
+  <p class="p-3">Créé le: <%= my_gossip.created_at.strftime("%d/%m/%Y à %Hh%M")%></p>
+</div>

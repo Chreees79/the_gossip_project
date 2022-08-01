@@ -1,6 +1,6 @@
 # Gossip Project - On RAILS Baby ! 
 
-![](https://imgur.com/a/RnjAnR5)
+![](https://i.imgur.com/LXoz75b.png)
 
 Rails, Front & Back
 
@@ -11,13 +11,20 @@ An updated version of our Gossip Project app that displays a few static pages, a
 
 
 This project was developed in peer programming with a part of the the Vocal_15 team : [@Chreees79](https://github.com/Chreees79) / [@GuillaumeBrthlt](https://github.com/GuillaumeBrthlt) / [@linahello](https://github.com/linahello) / [@LoiseauB](https://github.com/LoiseauB) / [@xko0](https://github.com/xko0) !
-This was a project to do on day 1 / week 4 of our Fullstack Bootcamp (Hi THP !)
+This was a project to do on day 1 / week 3 of our Fullstack Bootcamp (Hi THP !)
 
 ~~ https://github.com/linahello/the_gossip_project.git ~~
 
 ![](https://media1.giphy.com/media/Mcz0ucICT4ei00lytH/giphy.gif?cid=790b76110df15e4459e6880fd3282cadce035ecfbceacc2c&rid=giphy.gif&ct=g)
 
-### Starting with few dinamic pages ###
+### How to acces ###
+
+```ruby
+$ rails server  
+```
+
+### Starting with few dynamic pages ###
+
 
 
 ~~ Homepage
