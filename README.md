@@ -53,7 +53,7 @@ Something to get into the mood [here](https://www.youtube.com/watch?v=NUuRX3JYCH
 
 ### Authors Details:
 
-👤  **half of the famous Vocal_15**
+👤  **the famous and infamous Vocal_15**
 
 -   [@Chreees79](https://github.com/Chreees79)
 -   [@GuillaumeBrthlt](https://github.com/GuillaumeBrthlt)

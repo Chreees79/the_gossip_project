@@ -1,0 +1,40 @@
+<% begin %>
+<% if @gossip.errors.any? %>
+    <div class="alert alert-danger w-100" role="alert">
+  <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+  <ul>
+    <% @gossip.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  🤬 Le jour où les cons auront du flair, toi, tu vas trouver des truffes !!! 🤬
+  </div>
+<% end %>
+<%rescue => e %>
+<%end%>
+<div class="d-flex align-items-center flex-column">
+    <h1>Publiez votre potin ici :</h1>
+    <p class="rules">Quelques règles:</p>
+    <ul class="rules_list">
+        <li>Titre obligatoire</li>
+        <li>Titre entre 3 et 14 caractères</li>
+        <li>Le contenu ne doit pas être vide</li>
+    </ul>
+    <div>
+        <%= form_tag url_for(action: 'create'), method: "post" do %>
+    <div>
+        <%= label_tag :Titre %>
+    </div>
+        <%= text_field_tag :title %>
+        <br /> <br />
+    <div>
+        <%= label_tag :Contenu %>
+    </div>
+        <%= text_area_tag :content %>
+        <br /> <br />
+    <div>
+        <%= submit_tag 'Publier', class:"btn btn-warning mb-5"%>
+    </div>
+        <% end %>
+    </div>
+</div>

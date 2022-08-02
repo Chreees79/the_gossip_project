@@ -5,7 +5,7 @@
       <h3 class="p-3">Des précisions à propos de ce potin ?</h3>
       <%my_gossip = Gossip.find(params[:id])%>
       <h4 class="p-3">Titre: <%= my_gossip.title%></h4>
-      <h5 class="p-3">Auteur: <%= link_to "#{my_gossip.user.first_name} #{my_gossip.user.last_name}", author_path(my_gossip.user.id), class:"author"%></h5>
+      <h5 class="p-3">Auteur: <%= link_to "#{my_gossip.user.first_name} #{my_gossip.user.last_name}", user_path(my_gossip.user.id), class:"author"%></h5>
       <blockquote class="blockquote>
         <p class="mb-0">Contenu: <%= my_gossip.content%></p>
       </blockquote>
