@@ -1,14 +1,5 @@
 <% begin %>
-<% if @gossip.errors.any? %>
-    <div class="alert alert-danger w-100" role="alert">
-  <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
-  <ul>
-    <% @gossip.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-  </div>
-  <% else %>
+<% unless @gossip.errors.any? %>
   <div class="alert alert-success w-100" role="alert">
   <p>Votre potin a été ajouté avec succès</p>
   </div>
