@@ -14,12 +14,14 @@
  *= require_self
  */
 
+
+
 html body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
-  padding: 0;
+  padding-top: 70px;
   height: 100vh;
   background-color: #d2c9bd8c;
 }
@@ -48,7 +50,7 @@ h1 {
     color: rgb(181, 144, 89);
   }
 }
-.btn {
+.cta {
   animation: cta 1.4s infinite alternate;
 }
 @keyframes cta {
@@ -97,4 +99,31 @@ h1 {
 .home_welcome {
   margin-top: 50px;
   margin-bottom: 20px;
+}
+.opac_img {
+  opacity: 1;
+}
+
+.home_welcome {
+  font-family: 'Bebas Neue', cursive;
+}
+
+.home_welcome .btn {
+  font-size: 1.7rem;
+}
+
+.rules {
+  font-size: 1.7rem;
+}
+
+.rules_list {
+  font-style: italic;
+}
+
+form {
+  padding-top: 30px;
+}
+
+.alert {
+  margin-top: -14px;
 }
