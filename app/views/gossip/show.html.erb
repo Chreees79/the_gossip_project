@@ -4,19 +4,60 @@
   <div class="row row-cols-1 row-cols-md-2 g-4 d-flex align-items-center">
     <div class="g-col-5">
       <h3 class="p-3">Des précisions à propos de ce potin ?</h3>
-      <%my_gossip = Gossip.find(params[:id])%>
-      <h4 class="p-3">Titre: <%= my_gossip.title%></h4>
-      <h5 class="p-3">Auteur: <%= link_to "#{my_gossip.user.first_name} #{my_gossip.user.last_name}", user_path(my_gossip.user.id), class:"author"%></h5>
-      <blockquote class="blockquote>
-        <p class="mb-0">Contenu: <%= my_gossip.content%></p>
+      <h4 class="p-3">Titre: <%= @gossip.title%></h4>
+      <h5 class="p-3">Auteur: <%= link_to "#{@gossip.user.first_name} #{@gossip.user.last_name}", user_path(@gossip.user.id), class:"author"%></h5>
+      <p class="city_name p-3">Ville: <%= link_to "#{@gossip.user.city.name}", city_path(@gossip.user.city.id) %></p>
+      <blockquote class="blockquote">
+        <p class="mb-0">Contenu: <%= @gossip.content%></p>
       </blockquote>
-      <p class="p-3">Créé le: <%= my_gossip.created_at.strftime("%d/%m/%Y à %Hh%M")%></p>
+      <p class="p-3">Créé le: <%= @gossip.created_at.strftime("%d/%m/%Y à %Hh%M")%></p>
+      <div class="d-flex justify-content-evenly"> 
+        <div>
+          <%= link_to "Modifier", edit_gossip_path(@gossip.id), class: "btn btn-warning d-inline-flex justify-content-center p-3"%>
+        </div>
+        <div>
+          <%= link_to "Supprimer", gossip_path(@gossip.id), class: "btn btn-danger d-inline-flex justify-content-center p-3", :data => {:confirm => 'Are you sure?', :method => "DELETE"} %>
+        </div>
+      </div>
     </div>
-
+    
     <div class="g-col-5">
-      <img src="https://i.imgur.com/WFzrYz9.jpg" style="width: 80%">
+      <img src="https://i.imgur.com/WFzrYz9.jpg" style="width: 80%"> 
     </div>
   </div>
 </div>
 <div>
+  <h3>section commentaires:<h3>
+  <div class="row row-cols-1 row-cols-md-2 g-4 d-flex align-items-center justify-content-around">
+    <div class="g-col-5">
+      <% @comments.each do |comment| %>
+        <div class="row comment">
+          <div class="col-sm-3">
+            <div class="comment_author">
+              <p><%=comment.user.first_name%> <%=comment.user.last_name%> : <%= link_to "📑", edit_comment_path(comment.id) %></p>
+            </div>
+          </div>
+          <div class="g-col-5">
+            <div class="well">
+              <p><%=comment.content%></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-sm-4">
+      <%= form_for :comment do |f| %>
+        
+        <div class="form-group", style="width: 500px">
+        <h3>Ecrire un commentaire: </h3>
+          <%= f.text_area :content, class:"form-control"%>
+        </div>
+
+        <div class="form-group d-flex justify-content-end" , style="width: 500px">
+          <button type="submit", class= "btn btn-warning mb-3 mt-3", data_method= "create" >Commenter</button>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
 </div>
