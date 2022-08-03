@@ -69,3 +69,11 @@ Something to get into the mood [here](https://www.youtube.com/watch?v=NUuRX3JYCH
 Give us a ⭐ Star on GitHub — it helps!
 
 
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%=comment.user.first_name%> <%=comment.user.last_name%></h5>
+    
+    <p class="card-text"><%=comment.content%></p>
+    <%=link_to "Modifier", edit_gossip_comment_path(comment.id), class:"card-link"%>
+  </div>
+</div> 

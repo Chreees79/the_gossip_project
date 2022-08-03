@@ -7,13 +7,10 @@
     </div>
     <div class="g-col-5">
         <h1 class="p-3" style="color: rgb(110, 76, 7)">Fiche de l'auteur:</h1>
-        <%my_author = User.find(params[:id])%>
-        <h2 class="p-3"><%= "#{my_author.first_name} #{my_author.last_name}, #{my_author.age} ans" %></h2>
-        <p class="p-3">description: <%= my_author.description %></p>
-        <p class="p-3"><%= "email: #{my_author.email}"%></p>
-        <p class="p-3">Ville: <%= my_author.city.name %></p>
+        <h2 class="p-3"><%= "#{@user.first_name} #{@user.last_name}, #{@user.age} ans" %></h2>
+        <p class="p-3">description: <%= @user.description %></p>
+        <p class="p-3"><%= "email: #{@user.email}"%></p>
+        <p class="city_name p-3">Ville: <%= link_to "#{@user.city.name}", city_path(@user.city.id) %></p>
     </div>
   </div>
-</div>
-<div>
 </div>
